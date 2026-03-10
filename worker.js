@@ -79,7 +79,7 @@ export default {
         }
 
         .nav-logo img {
-            height: 40px;
+            height: 80px;
             width: auto;
         }
 
@@ -956,7 +956,7 @@ export default {
 </html>
 `;
     return new Response(HTML, {
-      headers: { "Content-Type": "text/html;charset=UTF-8" }
+      headers: { 'Content-Type': 'text/html;charset=UTF-8' },
     });
-  }
+  },
 };
