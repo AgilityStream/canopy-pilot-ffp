@@ -11,26 +11,30 @@
     <style>
         /* ============================================
            CANOPY PILOT — FFP LANDING PAGE
-           Brand: Teal/Cyan (#7EBEC5), Dark backgrounds
+           Brand: Blue (#008CD6) + Green (#43B134) from logo
            Font: Roboto (matches main site)
            Framework: Million Dollar Landing Page (6 sections)
            ============================================ */
 
         :root {
-            --cp-teal: #7EBEC5;
-            --cp-teal-dark: #5A9EA5;
-            --cp-teal-light: #A8D8DC;
-            --cp-dark: #0A1628;
-            --cp-darker: #060F1D;
+            --cp-blue: #008CD6;
+            --cp-blue-dark: #0070AB;
+            --cp-blue-light: #E6F3FB;
+            --cp-green: #43B134;
+            --cp-green-dark: #369028;
+            --cp-green-light: #EAF7E8;
+            --cp-dark: #1A1A2E;
+            --cp-darker: #111122;
             --cp-navy: #0E1F3D;
-            --cp-text: #E8ECF1;
-            --cp-text-muted: #8A9BB5;
+            --cp-text: #2D2D3F;
+            --cp-text-muted: #5F6B7A;
             --cp-white: #FFFFFF;
-            --cp-accent: #4ECDC4;
-            --cp-warning: #F4A261;
-            --cp-stat-bg: rgba(126, 190, 197, 0.08);
-            --cp-card-bg: rgba(14, 31, 61, 0.6);
-            --cp-border: rgba(126, 190, 197, 0.15);
+            --cp-warning: #E8913A;
+            --cp-bg: #FFFFFF;
+            --cp-bg-alt: #F5F7FA;
+            --cp-stat-bg: rgba(0, 140, 214, 0.08);
+            --cp-card-bg: #FFFFFF;
+            --cp-border: rgba(0, 0, 0, 0.08);
         }
 
         * {
@@ -45,7 +49,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: var(--cp-darker);
+            background: var(--cp-bg);
             color: var(--cp-text);
             line-height: 1.6;
             overflow-x: hidden;
@@ -58,9 +62,10 @@
             width: 100%;
             z-index: 1000;
             padding: 1rem 2rem;
-            background: rgba(6, 15, 29, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--cp-border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -69,18 +74,18 @@
         .nav-logo {
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--cp-white);
+            color: var(--cp-blue);
             text-decoration: none;
             letter-spacing: 0.5px;
         }
 
         .nav-logo span {
-            color: var(--cp-teal);
+            color: var(--cp-green);
         }
 
         .nav-cta {
-            background: var(--cp-teal);
-            color: var(--cp-dark);
+            background: var(--cp-blue);
+            color: var(--cp-white);
             padding: 0.6rem 1.5rem;
             border-radius: 6px;
             text-decoration: none;
@@ -90,7 +95,7 @@
         }
 
         .nav-cta:hover {
-            background: var(--cp-teal-light);
+            background: var(--cp-blue-dark);
             transform: translateY(-1px);
         }
 
@@ -109,12 +114,12 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--cp-teal);
+            color: var(--cp-blue);
             margin-bottom: 1rem;
         }
 
         h1, h2, h3 {
-            color: var(--cp-white);
+            color: var(--cp-dark);
             line-height: 1.2;
         }
 
@@ -127,9 +132,9 @@
             align-items: center;
             padding-top: 5rem;
             background:
-                radial-gradient(ellipse at 20% 50%, rgba(126, 190, 197, 0.06) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, rgba(78, 205, 196, 0.04) 0%, transparent 50%),
-                var(--cp-darker);
+                radial-gradient(ellipse at 20% 50%, rgba(0, 140, 214, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(67, 177, 52, 0.04) 0%, transparent 50%),
+                var(--cp-bg);
         }
 
         .hero .container {
@@ -147,7 +152,7 @@
         }
 
         .hero-content h1 .highlight {
-            color: var(--cp-teal);
+            color: var(--cp-blue);
         }
 
         .hero-subtitle {
@@ -171,7 +176,7 @@
         .hero-stat .number {
             font-size: 2.5rem;
             font-weight: 900;
-            color: var(--cp-teal);
+            color: var(--cp-blue);
             line-height: 1;
         }
 
@@ -188,8 +193,8 @@
         }
 
         .btn-primary {
-            background: var(--cp-teal);
-            color: var(--cp-dark);
+            background: var(--cp-blue);
+            color: var(--cp-white);
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
@@ -202,13 +207,13 @@
         }
 
         .btn-primary:hover {
-            background: var(--cp-teal-light);
+            background: var(--cp-blue-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(126, 190, 197, 0.25);
+            box-shadow: 0 8px 25px rgba(0, 140, 214, 0.2);
         }
 
         .btn-secondary {
-            color: var(--cp-teal);
+            color: var(--cp-blue-dark);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -219,7 +224,7 @@
         }
 
         .btn-secondary:hover {
-            color: var(--cp-teal-light);
+            color: var(--cp-blue);
         }
 
         /* Video Container */
@@ -227,9 +232,10 @@
             position: relative;
             border-radius: 12px;
             overflow: hidden;
-            background: var(--cp-navy);
+            background: var(--cp-bg-alt);
             border: 1px solid var(--cp-border);
             aspect-ratio: 16/9;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .video-placeholder {
@@ -240,28 +246,27 @@
             align-items: center;
             justify-content: center;
             background:
-                linear-gradient(135deg, rgba(126, 190, 197, 0.05) 0%, rgba(14, 31, 61, 0.8) 100%),
-                var(--cp-navy);
+                linear-gradient(135deg, rgba(0, 140, 214, 0.06) 0%, rgba(245, 247, 250, 1) 100%);
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .video-placeholder:hover {
             background:
-                linear-gradient(135deg, rgba(126, 190, 197, 0.1) 0%, rgba(14, 31, 61, 0.7) 100%),
-                var(--cp-navy);
+                linear-gradient(135deg, rgba(0, 140, 214, 0.12) 0%, rgba(245, 247, 250, 1) 100%);
         }
 
         .play-btn {
             width: 72px;
             height: 72px;
             border-radius: 50%;
-            background: var(--cp-teal);
+            background: var(--cp-blue);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
             transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 140, 214, 0.2);
         }
 
         .video-placeholder:hover .play-btn {
@@ -271,7 +276,7 @@
         .play-btn svg {
             width: 28px;
             height: 28px;
-            fill: var(--cp-dark);
+            fill: var(--cp-white);
             margin-left: 4px;
         }
 
@@ -295,12 +300,12 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: var(--cp-stat-bg);
-            border: 1px solid var(--cp-border);
+            background: var(--cp-blue-light);
+            border: 1px solid rgba(0, 140, 214, 0.2);
             border-radius: 100px;
             padding: 0.5rem 1rem;
             font-size: 0.8rem;
-            color: var(--cp-teal);
+            color: var(--cp-blue-dark);
             font-weight: 500;
             margin-bottom: 1.5rem;
         }
@@ -309,14 +314,14 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--cp-accent);
+            background: var(--cp-green);
         }
 
         /* ============================================
            SECTION 2: TRUST (Social Proof)
            ============================================ */
         .trust {
-            background: var(--cp-dark);
+            background: var(--cp-bg-alt);
             border-top: 1px solid var(--cp-border);
             border-bottom: 1px solid var(--cp-border);
         }
@@ -329,15 +334,17 @@
         }
 
         .trust-card {
-            background: var(--cp-card-bg);
+            background: var(--cp-white);
             border: 1px solid var(--cp-border);
             border-radius: 12px;
             padding: 2rem;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .trust-card:hover {
-            border-color: var(--cp-teal);
+            border-color: var(--cp-blue);
+            box-shadow: 0 4px 16px rgba(0, 140, 214, 0.12);
         }
 
         .trust-card .quote {
@@ -355,7 +362,7 @@
 
         .trust-card .name {
             font-weight: 600;
-            color: var(--cp-white);
+            color: var(--cp-dark);
             font-size: 0.95rem;
         }
 
@@ -387,7 +394,7 @@
            SECTION 3: EMPATHY (The Training Gap)
            ============================================ */
         .empathy {
-            background: var(--cp-darker);
+            background: var(--cp-bg);
         }
 
         .empathy-content {
@@ -408,13 +415,13 @@
         }
 
         .empathy-text strong {
-            color: var(--cp-white);
+            color: var(--cp-dark);
             font-weight: 600;
         }
 
         .stat-callout {
-            background: var(--cp-stat-bg);
-            border-left: 3px solid var(--cp-teal);
+            background: var(--cp-blue-light);
+            border-left: 3px solid var(--cp-blue);
             padding: 1.5rem 2rem;
             border-radius: 0 8px 8px 0;
             margin: 2rem 0;
@@ -423,7 +430,7 @@
         .stat-callout .big-number {
             font-size: 2rem;
             font-weight: 900;
-            color: var(--cp-teal);
+            color: var(--cp-blue);
         }
 
         .stat-callout .context {
@@ -436,7 +443,7 @@
            SECTION 4: PAIN (Cost of Status Quo)
            ============================================ */
         .pain {
-            background: var(--cp-dark);
+            background: var(--cp-bg-alt);
             border-top: 1px solid var(--cp-border);
             border-bottom: 1px solid var(--cp-border);
         }
@@ -461,10 +468,11 @@
         }
 
         .pain-card {
-            background: rgba(244, 162, 97, 0.04);
-            border: 1px solid rgba(244, 162, 97, 0.15);
+            background: var(--cp-white);
+            border: 1px solid rgba(232, 145, 58, 0.2);
             border-radius: 12px;
             padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .pain-card .pain-icon {
@@ -487,10 +495,11 @@
         .pain-bottom-line {
             margin-top: 3rem;
             padding: 2rem;
-            background: var(--cp-stat-bg);
-            border: 1px solid var(--cp-border);
+            background: var(--cp-white);
+            border: 1px solid rgba(0, 140, 214, 0.2);
             border-radius: 12px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .pain-bottom-line p {
@@ -500,7 +509,7 @@
         }
 
         .pain-bottom-line strong {
-            color: var(--cp-teal);
+            color: var(--cp-blue-dark);
             font-weight: 700;
         }
 
@@ -508,7 +517,7 @@
            SECTION 5: AUTHORITY (Why Canopy Pilot)
            ============================================ */
         .authority {
-            background: var(--cp-darker);
+            background: var(--cp-bg);
         }
 
         .authority h2 {
@@ -531,17 +540,18 @@
         }
 
         .authority-card {
-            background: var(--cp-card-bg);
+            background: var(--cp-bg-alt);
             border: 1px solid var(--cp-border);
             border-radius: 12px;
             padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .authority-card .card-icon {
             width: 48px;
             height: 48px;
             border-radius: 10px;
-            background: var(--cp-stat-bg);
+            background: var(--cp-blue-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -564,8 +574,8 @@
         /* Study findings callout */
         .study-callout {
             margin-top: 3rem;
-            background: var(--cp-card-bg);
-            border: 1px solid var(--cp-teal);
+            background: var(--cp-blue-light);
+            border: 1px solid rgba(0, 140, 214, 0.2);
             border-radius: 12px;
             padding: 2.5rem;
         }
@@ -592,7 +602,7 @@
         }
 
         .finding .check {
-            color: var(--cp-accent);
+            color: var(--cp-green);
             font-size: 1.1rem;
             flex-shrink: 0;
             margin-top: 2px;
@@ -609,8 +619,8 @@
            ============================================ */
         .action {
             background:
-                radial-gradient(ellipse at 50% 50%, rgba(126, 190, 197, 0.08) 0%, transparent 60%),
-                var(--cp-dark);
+                radial-gradient(ellipse at 50% 50%, rgba(0, 140, 214, 0.06) 0%, transparent 60%),
+                var(--cp-bg-alt);
             border-top: 1px solid var(--cp-border);
             text-align: center;
             padding: 6rem 2rem;
@@ -644,7 +654,7 @@
 
         /* ---- FOOTER ---- */
         footer {
-            background: var(--cp-darker);
+            background: var(--cp-dark);
             border-top: 1px solid var(--cp-border);
             padding: 2rem;
             text-align: center;
@@ -652,11 +662,11 @@
 
         footer p {
             font-size: 0.85rem;
-            color: var(--cp-text-muted);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         footer a {
-            color: var(--cp-teal);
+            color: var(--cp-blue);
             text-decoration: none;
         }
 
@@ -715,7 +725,7 @@
 
     <!-- NAVIGATION -->
     <nav>
-        <a href="https://canopypilot.io" class="nav-logo">CANOPY <span>PILOT</span></a>
+        <a href="https://canopypilot.io" class="nav-logo">CANOPY <span>+PILOT</span></a>
         <a href="#demo" class="nav-cta">Book a Demo</a>
     </nav>
 
@@ -777,7 +787,7 @@
     <section class="trust">
         <div class="container">
             <div class="section-label">What the Industry Is Saying</div>
-            <h2 style="font-size: 2.25rem; font-weight: 800;">Trusted by Federations, Drop Zones, and Military Programs Worldwide</h2>
+            <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--cp-dark);">Trusted by Federations, Drop Zones, and Military Programs Worldwide</h2>
 
             <div class="trust-grid">
                 <div class="trust-card">
@@ -913,6 +923,7 @@
             <div class="study-callout">
                 <h3>📄 Key Findings — French Parachute Federation Study</h3>
                 <p style="color: var(--cp-text-muted); margin-bottom: 0.5rem;">Independent research conducted January 2025 by Arnaud Devisy, commissioned by the FFP.</p>
+
 
                 <div class="study-findings">
                     <div class="finding">
